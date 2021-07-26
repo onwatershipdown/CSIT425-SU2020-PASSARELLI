@@ -81,7 +81,7 @@ public:
 };
 
 
-item main()
+int main()
 {
 
 CarRental Bolt;
