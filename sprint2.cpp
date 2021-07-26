@@ -20,30 +20,58 @@ private:
 
 public:
 
-
+	void storebodytype(int x)
+	{
+		bodytype=x;
+	}
 	int getbodytype()
 	{
 		return bodytype;
 	}
+	void storedoorcount(int x)
+	{
+		doorcount=x;
+	}
 	int getdoorcount()
 	{
 		return doorcount;	
+	}
+	void storeelectric(int x)
+	{
+		electric=x;
 	}	
 	int getelectric()
 	{
 		return electric;
 	}
+
+	void storetransmission(int x)
+	{
+		manualtrans=x;
+	}
 	int gettransmission()
 	{
 		return manualtrans;
+	}
+	void storedrivetype(int x)
+	{
+	drivetype=x;
 	}	
 	int getdrivetype()
 	{
 		return drivetype;
 	}
+	void storecylinders(int x)
+	{
+		cylinders=x;
+	}
 	int getcylinders()
 	{
 		return cylinders;
+	}
+	void storesunroof(int x)
+	{
+		sunroof=x;
 	}
 	int getsunroof()
 	{
