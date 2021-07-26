@@ -21,33 +21,33 @@ private:
 public:
 
 
-	void getbodytype()
+	int getbodytype()
 	{
-		CarFile<< bodytype<< endl;
+		return bodytype;
 	}
-	void getdoorcount()
+	int getdoorcount()
 	{
-		cout<<doorcount<< endl;	
+		return doorcount;	
 	}	
-	void getelectric()
+	int getelectric()
 	{
-		cout << electric << endl;
+		return electric;
 	}
-	void gettransmission();
+	int gettransmission()
 	{
-		cout << manualtrans << endl;
+		return manualtrans;
 	}	
-	void getdrivetype();
+	int getdrivetype()
 	{
-		cout << drivetype << endl;
+		return drivetype;
 	}
-	void getcylinders();
+	int getcylinders()
 	{
-		cout << cylinders << endl;
+		return cylinders;
 	}
-	void getsunroof();
+	int getsunroof()
 	{
-		cout << sunroof <<endl;
+		return sunroof;
 	}
 };
 
@@ -60,7 +60,7 @@ CarRental Bolt;
 
 ofstream CarFile;
 CarFile.open ("CarList.txt");
-Bolt.getbodytype();
+CarFile<< Bolt.getbodytype()<< endl;
 
 
 return 0;
