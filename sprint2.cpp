@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -22,7 +23,7 @@ public:
 
 	void getbodytype()
 	{
-		cout<< bodytype<< endl;
+		CarFile<< bodytype<< endl;
 	}
 	void getdoorcount()
 	{
@@ -55,6 +56,11 @@ int main()
 {
 
 CarRental Bolt;
+
+
+ofstream CarFile;
+CarFile.open ("CarList.txt");
+Bolt.getbodytype();
 
 
 return 0;
