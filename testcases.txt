@@ -1,0 +1,7 @@
+Test Cases for Used Car Database
+
+1: If (electric!=1 && cylinders>0)  	Expected logic error. Pure Electric cars have no cylinders
+2: If (bodytype==1 && sunroof==1)   	Expect logic error. You can't have a sunroof if you're already a convertible!
+3. If (bodytype==1 && doorcount==3) 	Expect logic error. Sunroofs don't habe hatchbacks!
+4. If (bodytype==1 && doorcount==3) 	Expect logic error. Sunroofs don't have hatchbacks!
+5. if (bodytype==7 && doorcount==5) 	Expect logic error. Pickups have 2, 3, or 4 doors, but not five!
