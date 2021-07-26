@@ -10,6 +10,8 @@ class CarRental
 
 
 private:
+	string manufacturer;
+	string model;
 	item bodytype=2; //1 for convertible, 2 for coupe, 3 for sedan, 4 for liftback, 5 for van, 6 for suv, 7 for truck
 	item doorcount=2; //2 for coupe, 3 for 2-door hatch, 4 for sedan, 5 for 4-door hatch
 	bool electric=1;
@@ -20,6 +22,15 @@ private:
 
 
 public:
+	void storemanufacturer (string x);
+	{
+	manufacturer=x;
+	}
+	void storemodel (string x);
+	{
+	model=x;
+	}
+
 
 	void storebodytype(item x)
 	{
@@ -32,6 +43,11 @@ public:
 	void storedoorcount(item x)
 	{
 		doorcount=x;
+	}
+
+	string printdoorcount(ofstream &CarFile, int x)
+	{
+		CarFile << "This car has " << x << " doors. \n";
 	}
 	item getdoorcount()
 	{
@@ -68,6 +84,7 @@ public:
 	}
 	item getcylinders()
 	{
+
 		return cylinders;
 	}
 	void storesunroof(item x)
@@ -89,6 +106,47 @@ CarRental Bolt;
 
 ofstream CarFile;
 CarFile.open ("CarList.txt");
+
+//database transcoder
+item Bodytype=Bolt.getbodytype();
+item DoorCount=Bolt.getdoorcount();
+switch (BodyType)
+{
+	case 1:	
+	CarFile << "This is a convertible. \n";
+	break;
+
+	case 2:
+	CarFile << "This is a coupe. \n";
+	break;
+	case 3:
+	CarFile << "This is a sedan. \n";
+	break;
+	case 4:
+	CarFile <<"This is a liftback/wagon. \n";
+	break;
+	case 5:
+	CarFile << "This is a van. \n";
+	break;
+	case 6:
+	CarFile << "This is an SUV. \n";
+	break;
+	case 7:
+	CarFile << "This is a pickup truck. \n";
+	break;
+}
+
+
+
+switch (DoorCount)
+{
+	case 2:
+	CarFile <"This is a 
+
+
+
+}
+
 CarFile<< Bolt.getbodytype()<< endl;
 
 
