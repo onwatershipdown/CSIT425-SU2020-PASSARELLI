@@ -4,83 +4,84 @@
 
 using namespace std;
 
+typedef unsigned short int item;
 class CarRental
 {
 
 
 private:
-	int bodytype=2; //1 for convertible, 2 for coupe, 3 for sedan, 4 for liftback, 5 for van, 6 for suv, 7 for truck
-	int doorcount=2; //2 for coupe, 3 for 2-door hatch, 4 for sedan, 5 for 4-door hatch
+	item bodytype=2; //1 for convertible, 2 for coupe, 3 for sedan, 4 for liftback, 5 for van, 6 for suv, 7 for truck
+	item doorcount=2; //2 for coupe, 3 for 2-door hatch, 4 for sedan, 5 for 4-door hatch
 	bool electric=1;
 	bool manualtrans=1;
-	int drivetype=1; //1 for front, 2 for rear, 3 for awd, 4 for 4wd
-	int cylinders=0;
+	item drivetype=1; //1 for front, 2 for rear, 3 for awd, 4 for 4wd
+	item cylinders=0;
 	bool sunroof=1;
 
 
 public:
 
-	void storebodytype(int x)
+	void storebodytype(item x)
 	{
 		bodytype=x;
 	}
-	int getbodytype()
+	item getbodytype()
 	{
 		return bodytype;
 	}
-	void storedoorcount(int x)
+	void storedoorcount(item x)
 	{
 		doorcount=x;
 	}
-	int getdoorcount()
+	item getdoorcount()
 	{
 		return doorcount;	
 	}
-	void storeelectric(int x)
+	void storeelectric(item x)
 	{
 		electric=x;
 	}	
-	int getelectric()
+	item getelectric()
 	{
 		return electric;
 	}
 
-	void storetransmission(int x)
+	void storetransmission(item x)
 	{
 		manualtrans=x;
 	}
-	int gettransmission()
+	item gettransmission()
 	{
 		return manualtrans;
 	}
-	void storedrivetype(int x)
+	void storedrivetype(item x)
 	{
 	drivetype=x;
 	}	
-	int getdrivetype()
+	item getdrivetype()
 	{
 		return drivetype;
 	}
-	void storecylinders(int x)
+	void storecylinders(item x)
 	{
 		cylinders=x;
 	}
-	int getcylinders()
+	item getcylinders()
 	{
 		return cylinders;
 	}
-	void storesunroof(int x)
+	void storesunroof(item x)
 	{
 		sunroof=x;
 	}
-	int getsunroof()
+	item getsunroof()
 	{
 		return sunroof;
 	}
 };
 
 
-int main()
+item main()
 {
 
 CarRental Bolt;
